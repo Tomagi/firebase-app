@@ -1,5 +1,7 @@
 <ng-container *ngIf="currentUser$ | async as user; then memberTemplate; else loginButton"></ng-container>
 
+<a routerLink="/members">Members</a>
+
 <ng-template #loginButton>
   <button (click)="signInWithGoogle()" class="btn btn-lg btn-primary">
     Sign In With Google <i class="fa fa-google ml-3"></i>
