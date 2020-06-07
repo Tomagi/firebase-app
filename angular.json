@@ -7,7 +7,17 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+          "prefix": "tg",
+          "style": "scss",
+          "skipTests": false,
+          "inlineStyle": true
+        },
+        "@schematics/angular:directive": {
+          "prefix": "tg",
+          "skipTests": false
+        },
+        "@schematics/angular:service": {
+          "skipTests": false
         }
       },
       "root": "",
@@ -121,8 +131,13 @@
               "devServerTarget": "firebase-app:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "firebase-app"
 }

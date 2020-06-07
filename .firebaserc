@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "fir-app-b27de": {
+      "hosting": {
+        "firebase-app": [
+          "fir-app-b27de"
+        ]
+      }
+    }
+  }
+}
