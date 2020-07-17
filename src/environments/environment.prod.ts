@@ -1,5 +1,6 @@
 export const environment = {
   production: true,
+  apiUrl: 'https://jsonplaceholder.typicode.com',
   firebaseConfig: {
     apiKey: "AIzaSyAmmkfkanqhTBuLyzBpZ6ltiAW0TbbaXCo",
     authDomain: "fir-app-b27de.firebaseapp.com",

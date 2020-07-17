@@ -13,10 +13,12 @@ const routes: Routes = [
     path: 'members',
     canLoad: [AuthGuard],
     canActivate: [AuthGuard],
-    loadChildren: () => import('./features/members/members.module').then(m => m.MembersModule) }];
+    loadChildren: () => import('./features/members/members.module').then(m => m.MembersModule)
+  },
+  ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes/*, {enableTracing: true}*/)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
