@@ -10,7 +10,7 @@
           "prefix": "tg",
           "style": "scss",
           "skipTests": false,
-          "inlineStyle": true
+          "inlineStyle": false
         },
         "@schematics/angular:directive": {
           "prefix": "tg",

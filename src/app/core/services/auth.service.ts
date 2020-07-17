@@ -62,6 +62,18 @@ export class AuthService {
     return userRef.set(userData,{merge: true});
   }
 
+  public async signInWithFacebook(): Promise<void> {
+
+  }
+
+  public async signInWithApple(): Promise<void> {
+
+  }
+
+  public async signInWithAmazon(): Promise<void> {
+
+  }
+
   public async signOut() {
     await this._afAuth.signOut();
     await this._router.navigate(['']);

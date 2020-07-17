@@ -1,0 +1,55 @@
+<ng-container *ngIf="currentUser$ | async as user; then memberTemplate; else loginButton"></ng-container>
+
+<ng-template #loginButton>
+  <div class="card">
+    <div class="card-title text-center">
+      <h2>Sign Up to Triplanner</h2>
+    </div>
+    <div class="card-body">
+      <div class="form">
+        <div class="form-input">
+          <label for="username">Username</label>
+          <input id="username" type="text">
+        </div>
+        <div class="form-input">
+          <label for="password">Password</label>
+          <input id="password" type="text">
+        </div>
+      </div>
+      <div class="login-buttons">
+        <button (click)="signInWithGoogle()" class="btn btn-lg btn-info">
+          Google <i class="fa fa-google ml-3"></i>
+        </button>
+
+        <button (click)="signInWithFacebook()" class="btn btn-lg btn-info">
+          Facebook <i class="fa fa-facebook ml-3"></i>
+        </button>
+
+        <button (click)="signInWithApple()" class="btn btn-lg btn-info">
+          Apple <i class="fa fa-apple ml-3"></i>
+        </button>
+
+        <button (click)="signInWithAmazon()" class="btn btn-lg btn-info">
+          Amazon <i class="fa fa-amazon ml-3"></i>
+        </button>
+
+        <button (click)="signInWithAmazon()" class="btn btn-lg btn-info">
+          Twitter <i class="fa fa-twitter ml-3"></i>
+        </button>
+
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #memberTemplate let-user>
+  <div class="card">
+    <div class="card-body">
+        <img [src]="user.image_url">
+        <h5 class="card-title">{{user.display_name}}</h5>
+    </div>
+    <button (click)="signOut()" class="btn btn-lg btn-outline-danger">
+      Sign Out <i class="fa fa-google ml-3"></i>
+    </button>
+  </div>
+</ng-template>

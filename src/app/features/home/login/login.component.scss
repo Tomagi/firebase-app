@@ -1,0 +1,35 @@
+.login-buttons {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+
+  button {
+    margin: 0.2em;
+  }
+}
+
+.card {
+.card-body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-title{
+  h2 {
+  }
+}
+}
+
+.form {
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: stretch;
+.form-input {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+}
