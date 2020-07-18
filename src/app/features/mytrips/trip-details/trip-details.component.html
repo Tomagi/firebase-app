@@ -1,0 +1,23 @@
+<div class="grid-container">
+  <div class="trip-data">
+    trip data
+  </div>
+  <div class="images">
+  </div>
+  <div class="posts">
+    <ng-container *ngIf="tripPosts$ | async as tripPosts; then posts; else noposts"></ng-container>
+    <ng-template #posts let-tripPosts>
+        <div *ngFor="let post of tripPosts">
+          <tg-post [data]="post"></tg-post>
+        </div>
+    </ng-template>
+    <ng-template #noposts>
+      <div>
+        <p>No posts for you.</p>
+      </div>
+    </ng-template>
+  </div>
+  <div class="todos">
+    todos
+  </div>
+</div>

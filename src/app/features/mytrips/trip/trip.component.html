@@ -1,0 +1,11 @@
+<div class="card bg-dark text-white trip">
+  <img [src]="trip.cover" class="card-img-top">
+  <div class="card-body">
+    <h4 class="card-title">{{ trip.name}}</h4>
+    <p class="card-text">
+      {{trip.startDate | date:'dd/MM/yyyy'}}-
+      {{trip.endDate | date:'dd/MM/yyyy'}}
+    </p>
+    <!-- <a href="#" class="btn btn-info">Dive in!</a> -->
+  </div>
+</div>

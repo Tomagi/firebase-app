@@ -58,7 +58,7 @@ export class AuthService {
       }
     };
 
-    await this._router.navigate(['/members']);
+    await this._router.navigate(['/mytrips']);
     return userRef.set(userData,{merge: true});
   }
 

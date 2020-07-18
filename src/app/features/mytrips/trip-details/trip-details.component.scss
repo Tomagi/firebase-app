@@ -1,0 +1,37 @@
+.grid-container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 49vw);
+  grid-template-rows: repeat(2, 45vh);
+  gap: 10px 10px;
+  grid-template-areas:
+    "posts trip-data"
+    "todos images";
+}
+
+.trip-data {
+  grid-area: trip-data;
+  background-color: grey;
+}
+
+.images {
+  grid-area: images;
+  background-color: rgb(170, 160, 160);
+}
+
+.posts {
+  grid-area: posts;
+  background-color: rgb(61, 56, 56);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.todos {
+  grid-area: todos;
+  background-color: rgb(228, 220, 220);
+}

@@ -1,16 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './navbar/navbar.component';
+import { HighlighterDirective } from './directives/highlighter.directive';
 
 
 
 @NgModule({
-  declarations: [NavbarComponent],
+  declarations: [NavbarComponent, HighlighterDirective],
   imports: [
     CommonModule
   ],
   exports: [
-    NavbarComponent
+    NavbarComponent,
+    HighlighterDirective
   ]
 })
 export class SharedModule { }

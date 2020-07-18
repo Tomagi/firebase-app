@@ -1,0 +1,11 @@
+.trips {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+
+  .trip {
+    margin: 0.5em;
+  }
+}

@@ -1,0 +1,15 @@
+<ng-container *ngIf="userTrips$ | async as userTrips; then trips; else notrips"></ng-container>
+
+<ng-template #trips let-userTrips>
+  <div class="trips">
+    <div class="trip" *ngFor="let currentTrip of userTrips">
+      <tg-trip [trip]="currentTrip"></tg-trip>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #notrips>
+  <p>Haven't planned a trip yet?</p>
+</ng-template>
+
+

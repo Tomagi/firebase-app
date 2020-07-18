@@ -15,9 +15,14 @@
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a  class="nav-link"
-            [href]="connectedUser ? 'logout' : 'login'">
-            {{ connectedUser ? 'Logout' : 'Login' }}
+        <a  class="nav-link" *ngIf="!connectedUser"
+            href="login">
+            Login
+        </a>
+        <a  class="nav-link" *ngIf="connectedUser"
+            href="javascript:void(0)"
+            (click)="auth.signOut()">
+            Logout
         </a>
       </li>
       <li class="nav-item">

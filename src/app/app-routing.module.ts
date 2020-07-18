@@ -14,14 +14,14 @@ const routes: Routes = [
     canLoad: [AuthGuard],
     canActivate: [AuthGuard],
     loadChildren: () =>
-      import('./planner/planner.module').then((m) => m.PlannerModule),
+      import('./features/planner/planner.module').then((m) => m.PlannerModule),
   },
   {
     path: 'mytrips',
     canLoad: [AuthGuard],
     canActivate: [AuthGuard],
     loadChildren: () =>
-      import('./mytrips/mytrips.module').then((m) => m.MytripsModule),
+      import('./features/mytrips/mytrips.module').then((m) => m.MytripsModule),
   },
 ];
 
