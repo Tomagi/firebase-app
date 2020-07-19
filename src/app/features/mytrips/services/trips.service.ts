@@ -6,6 +6,8 @@ import { TransportationType } from '../models/transportation.model';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../../environments/environment';
 import { map, tap } from 'rxjs/operators';
+import { Todo } from '../models/todo.model';
+import { Photo } from '../models/photo.model';
 
 @Injectable({providedIn: 'root'})
 export class TripsService {
@@ -127,9 +129,16 @@ export class TripsService {
   }
 
   getTripImages(tripID: string) {
-    return this.http.get<Post[]>(`${environment.apiUrl}/photos`).pipe(
-      map(m => m.slice(0,3)),
+    return this.http.get<Photo[]>(`${environment.apiUrl}/photos`).pipe(
+      map(m => m.slice(0,10)),
       tap(photos => console.log('photos', photos))
+    );
+  }
+
+  getTripTodos(tripID: string): Observable<Todo[]> {
+    return this.http.get<Todo[]>(`${environment.apiUrl}/todos`).pipe(
+      map(m => m.slice(0,15)),
+      tap(todos => console.log('todos', todos))
     );
   }
 }

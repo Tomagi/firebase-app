@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { pluck, switchMap } from 'rxjs/operators';
+import { pluck, switchMap, delay } from 'rxjs/operators';
 import { ActivatedRoute } from '@angular/router';
 import { TripsService } from '../services/trips.service';
 
@@ -13,6 +13,7 @@ export class TripDetailsComponent implements OnInit {
   public tripId;
   public tripPosts$;
   public images$;
+  public todos$;
 
   constructor(private router: ActivatedRoute,
               private ts: TripsService) {
@@ -26,6 +27,8 @@ export class TripDetailsComponent implements OnInit {
       );
 
       this.images$ = this.ts.getTripImages(this.tripId);
+
+      this.todos$ = this.ts.getTripTodos(this.tripId);
     });
 
   }

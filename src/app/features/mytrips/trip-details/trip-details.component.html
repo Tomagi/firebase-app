@@ -1,10 +1,10 @@
 <div class="grid-container">
   <div class="trip-data">
-    trip data
   </div>
   <div class="images">
   </div>
   <div class="posts">
+    <h3>Posts</h3>
     <ng-container *ngIf="tripPosts$ | async as tripPosts; then posts; else noposts"></ng-container>
     <ng-template #posts let-tripPosts>
         <div *ngFor="let post of tripPosts">
@@ -18,6 +18,17 @@
     </ng-template>
   </div>
   <div class="todos">
-    todos
+    <h3>Tasks</h3>
+    <ng-container *ngIf="todos$ | async as tripTodos; then todos; else notodos"></ng-container>
+    <ng-template #todos let-tripTodos>
+        <div *ngFor="let todo of tripTodos">
+          <tg-todo [data]="todo"></tg-todo>
+        </div>
+    </ng-template>
+    <ng-template #notodos>
+      <div>
+        <p>No todos yet! Let's create one</p>
+      </div>
+    </ng-template>
   </div>
 </div>

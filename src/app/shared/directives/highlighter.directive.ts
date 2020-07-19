@@ -5,6 +5,8 @@ import { Directive, HostBinding, HostListener, ElementRef } from '@angular/core'
 })
 export class HighlighterDirective {
 
+  constructor(private er: ElementRef) { }
+
   @HostListener('mouseover')
   onMouseOver() {
     this.er.nativeElement.classList.add('highlighted');
@@ -14,7 +16,4 @@ export class HighlighterDirective {
   onMouseLeave() {
     this.er.nativeElement.classList.remove('highlighted');
   }
-
-  constructor(private er: ElementRef) { }
-
 }

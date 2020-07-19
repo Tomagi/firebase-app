@@ -1,0 +1,17 @@
+@import '../../../../styles/variables';
+
+.todo {
+  width: 100%;
+
+  .check{
+    position: absolute;
+    top: -13px;
+    left: -8px;
+    //color: $theme-color-1;
+
+    i {
+      font-size: 1.5em;
+      }
+  }
+
+}

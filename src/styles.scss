@@ -1,3 +1,4 @@
+@import "./styles/variables";
 @import "~font-awesome/css/font-awesome.css";
 @import "~bootstrap/dist/css/bootstrap.css";
 
@@ -6,8 +7,23 @@ body{
   padding-top: 70px;
 }
 
+
+body::-webkit-scrollbar {
+  width: 1em!important;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3)!important;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: yellow!important;
+  outline: 1px solid yellow!important;
+}
+
+
 .highlighted {
-  transition: 0.1s ease-in-out;
-  box-shadow: 0px 0px 20px 0px #17a2b8;
   cursor: pointer;
+  transition: 0.1s ease-in-out;
+  box-shadow: 0px 0px 20px 0px $theme-color-1;
 }

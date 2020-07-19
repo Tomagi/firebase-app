@@ -1,0 +1,12 @@
+<div class="todo card m-2"  tgHighlighter>
+  <div class="check">
+    <i *ngIf="data.completed" class="fa fa-check-circle"></i>
+    <i *ngIf="!data.completed" class="fa fa-times-circle"></i>
+  </div>
+  <div class="card-body">
+    <h6 class="card-title text-uppercase">
+      {{ data.title }}
+    </h6>
+  </div>
+</div>
+

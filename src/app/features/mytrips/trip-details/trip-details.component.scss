@@ -1,37 +1,42 @@
 .grid-container {
   width: 100%;
-  height: 100%;
+  height: calc(100vh - 70px);
+  padding: 1em;
   display: grid;
-  grid-template-columns: repeat(2, 49vw);
-  grid-template-rows: repeat(2, 45vh);
+  grid-template-columns: 3fr 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
   gap: 10px 10px;
   grid-template-areas:
-    "posts trip-data"
-    "todos images";
+    "trip-data todos posts"
+    "trip-data todos posts"
+    "images todos posts"
 }
 
 .trip-data {
   grid-area: trip-data;
-  background-color: grey;
 }
 
 .images {
   grid-area: images;
-  background-color: rgb(170, 160, 160);
+  width: 100%;
 }
 
 .posts {
   grid-area: posts;
-  background-color: rgb(61, 56, 56);
+  padding: 1em;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-
-  overflow-y: scroll;
-  overflow-x: hidden;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden scroll;
 }
 
 .todos {
   grid-area: todos;
-  background-color: rgb(228, 220, 220);
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden scroll;
 }

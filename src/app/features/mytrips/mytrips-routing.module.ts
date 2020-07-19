@@ -7,8 +7,9 @@ import { TimelineComponent } from './timeline/timeline.component';
 import { TripDetailsComponent } from './trip-details/trip-details.component';
 
 const routes: Routes = [
+  {path: 'timeline', component: TimelineComponent },
     {path: '', component: MytripsComponent },
-    {path: ':id', component: TripDetailsComponent }
+    {path: ':id', component: TripDetailsComponent },
   ];
 
 @NgModule({
