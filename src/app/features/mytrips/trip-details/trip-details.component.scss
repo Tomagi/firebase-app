@@ -7,13 +7,19 @@
   grid-template-rows: repeat(3, 1fr);
   gap: 10px 10px;
   grid-template-areas:
-    "trip-data todos posts"
-    "trip-data todos posts"
-    "images todos posts"
+    "trip-data trip-data todos"
+    "trip-data trip-data todos"
+    "posts posts todos"
 }
 
 .trip-data {
   grid-area: trip-data;
+
+  background-size: 15px 15px;
+  background-image:
+    linear-gradient(to right, rgba(128, 128, 128, 0.115) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(128, 128, 128, 0.115) 1px, transparent 1px);
+
 }
 
 .images {
@@ -25,10 +31,17 @@
   grid-area: posts;
   padding: 1em;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
   overflow: hidden scroll;
+  justify-content: flex-start;
+  overflow: hidden scroll;
+  align-items: baseline;
+
+  .post {
+    width: 25em;
+    margin: 1em;
+  }
 }
 
 .todos {
@@ -37,6 +50,6 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
+  //align-items: center;
   overflow: hidden scroll;
 }

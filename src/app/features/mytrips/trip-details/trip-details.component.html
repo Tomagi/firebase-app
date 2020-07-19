@@ -4,10 +4,10 @@
   <div class="images">
   </div>
   <div class="posts">
-    <h3>Posts</h3>
+    <!-- <h3>Posts</h3> -->
     <ng-container *ngIf="tripPosts$ | async as tripPosts; then posts; else noposts"></ng-container>
     <ng-template #posts let-tripPosts>
-        <div *ngFor="let post of tripPosts">
+        <div class="post" *ngFor="let post of tripPosts">
           <tg-post [data]="post"></tg-post>
         </div>
     </ng-template>
